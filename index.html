@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Отправить заявку</title>
+        <link rel="stylesheet" type="text/css" href="./style.css">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+    </head>
+    <body>
+        <form class="form">
+            <h1>Отправить заявку на участие в семинаре</h1>
+            <div class="form__text">
+                <p>Организаторы свяжутся с вами для подтверждения записи</p>
+                <p>Участие в семинаре бесплатное</p>
+            </div>
+            <label for="name" class="form__label" >Ваше имя:</label>
+            <input id="name" name="name" placeholder="Иванов Алексей" class="form__input" required/>
+            <label for="email" class="form__label">Контактный email</label>
+            <input id="email" type="email" name="email" placeholder="example@mail.com" class="form__input" required/>
+            <label for="seminar" class="form__label">Интересующий семинар</label>
+            <select id="seminar" class="form__input" required>
+                <option value="" selected disabled>Выбрать</option>
+                <option>Front-end разработка</option>
+                <option>Back-end разработка</option>
+                <option>Кибербезопасность</option>
+            </select>
+            <div class="form__footer">
+                <div class="form__description">
+                    <p>Все поля обязательны для заполнения</p>
+                    <p>Отправляя заявку, вы соглашаетесь с договором публичной оферты и политикой обработки данных</p>
+                </div>
+                <button type="submit" class="form__btn">Отправить</button>
+            </div>
+        </form>
+        <script src="./index.js"></script>
+    </body>
+</html>
